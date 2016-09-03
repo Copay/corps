@@ -1,88 +1,79 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>Corps Saying</title>
-  <meta name="author" content="Corps">
-  
-  <meta name="description" content="When I was...">
-  
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+  <meta name="description" content="When I was...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Corps Saying">
+<meta property="og:url" content="https://copay.github.io/corps/index.html">
+<meta property="og:site_name" content="Corps Saying">
+<meta property="og:description" content="When I was...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Corps Saying">
+<meta name="twitter:description" content="When I was...">
   
-  <meta property="og:site_name" content="Corps Saying"/>
-
+    <link rel="alternative" href="/atom.xml" title="Corps Saying" type="application/atom+xml">
   
-    <meta property="og:image" content="undefined"/>
   
-
-  <link href="/corps/favicon.png" rel="icon">
-  <link rel="alternate" href="/corps/atom.xml" title="Corps Saying" type="application/atom+xml">
-  <link rel="stylesheet" href="/corps/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/corps/css/style.css">
   
 
 </head>
-
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/corps/">Corps Saying</a></h1>
-  <h2><a href="/corps/">Corps said again</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/corps/">Home</a></li>
-    
-      <li><a href="/corps/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div>
-</header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-09-03T13:44:52.000Z"><a href="/corps/2016/09/03/Eval-与相似函数区别/">2016-09-03</a></time>
-      
-      
+    <article id="post-Eval-与相似函数区别" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <h1 class="title"><a href="/corps/2016/09/03/Eval-与相似函数区别/">Eval() 与相似函数区别</a></h1>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/corps/2016/09/03/Eval-与相似函数区别/">Eval() 与相似函数区别</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-meta">
+      <a href="/corps/2016/09/03/Eval-与相似函数区别/" class="article-date">
+  <time datetime="2016-09-03T13:44:52.000Z" itemprop="datePublished">2016-09-03</time>
+</a>
       
-        <h1 id="Eval-与相似函数区别"><a href="#Eval-与相似函数区别" class="headerlink" title="Eval() 与相似函数区别"></a>Eval() 与相似函数区别</h1><p>首先,<code>eval()</code>的作用是:</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先,<code>eval()</code>的作用是:</p>
 <blockquote>
-<p>  计算某字符串,并且执行内部的JavaScript代码.</p>
+<p>计算某字符串,并且执行内部的JavaScript代码.</p>
 </blockquote>
 <p>与<code>eval()</code>类似的函数有:</p>
 <blockquote>
 <ul>
 <li><p><code>setTimeout()</code>:</p>
 <blockquote>
-<p>  等待参数二(number)的毫秒数,执行参数一.(浏览器环境时:[当参数一为字符串时,执行内部代码],否则如果为nodejs,[报错]).</p>
+<p>等待参数二(number)的毫秒数,执行参数一.(浏览器环境时:[当参数一为字符串时,执行内部代码],否则如果为nodejs,[报错]).</p>
 </blockquote>
 </li>
 <li><p><code>setInterval()</code>:</p>
 <blockquote>
-<p>  每参数二(number)毫秒数,执行参数一.当参数一为字符串时,执行内部代码.</p>
+<p>每参数二(number)毫秒数,执行参数一.当参数一为字符串时,执行内部代码.</p>
 </blockquote>
 </li>
 <li><p><code>Function()</code>:</p>
 <blockquote>
-<p>  函数的构造函数.将参数字符串转换为函数体.</p>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;   &gt;   <span class="built_in">Function</span>(<span class="string">"somecode..."</span>)();<span class="comment">// Create a function and run.</span></div><div class="line">&gt;   &gt;</div></pre></td></tr></table></figure>
+<p>函数的构造函数.将参数字符串转换为函数体.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>(<span class="string">"somecode..."</span>)();<span class="comment">// Create a function and run.</span></div></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -91,60 +82,61 @@
 <p>然后是,微妙的区别:</p>
 <blockquote>
 <ul>
-<li><p><code>setTimeout</code>:</p>
-<p>经常被用来进行异步(想象一下<code>poccess.nextTick()</code>,效果差不多(具体区别就不讲了)).</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;       <span class="keyword">new</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&gt;         setTimeout(<span class="string">"console.log(this);"</span>,<span class="number">0</span>); <span class="comment">//return the window object.</span></div><div class="line">&gt;       &#125;;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>  刚才发现未构造直接运行的函数this指向window(Global对象)…</p>
-</blockquote>
-</li>
-<li><p><code>setInterval</code>:</p>
-<p>同上,自行脑补.</p>
-</li>
-<li><p><code>Function</code>:</p>
-<p>生成函数.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;       <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"console.log(this);"</span>); <span class="comment">//return a anonymous function(did not run).</span></div><div class="line">&gt;</div><div class="line">&gt;       <span class="keyword">new</span> (<span class="built_in">Function</span>(<span class="string">"console.log(this);"</span>)); <span class="comment">//return "this" object.</span></div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</li>
+<li><code>setTimeout</code>:</li>
 </ul>
-</blockquote>
-<p>&gt;</p>
+<p>经常被用来进行异步(想象一下<code>poccess.nextTick()</code>,效果差不多(具体区别就不讲了)).<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  setTimeout(<span class="string">"console.log(this);"</span>,<span class="number">0</span>); <span class="comment">//return the window object.</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <blockquote>
-<pre><code>&gt;   以上差别为运算顺序导致,对此感兴趣的朋友可以查询资料:[运算符优先级 -MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 
-</code></pre></blockquote>
+<p>刚才发现未构造直接运行的函数this指向window(Global对象)…</p>
+</blockquote>
+<ul>
+<li><code>setInterval</code>:</li>
+</ul>
+<p>同上,自行脑补.</p>
+<ul>
+<li><code>Function</code>:</li>
+</ul>
+<p>生成函数.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"console.log(this);"</span>); <span class="comment">//return a anonymous function(did not run).</span></div><div class="line"></div><div class="line"><span class="keyword">new</span> (<span class="built_in">Function</span>(<span class="string">"console.log(this);"</span>)); <span class="comment">//return "this" object.</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>以上差别为运算顺序导致,对此感兴趣的朋友可以查询资料:<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="external">运算符优先级 -MDN</a> </p>
+</blockquote>
+</blockquote>
 <p>然后.这些玩意儿大家少玩,对脑子有影响.</p>
 <p>最后是,一个小玩意儿.大家猜猜各行的结果吧.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="class"><span class="keyword">class</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>()&#123;</div><div class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</div><div class="line">    <span class="keyword">this</span>.b = <span class="number">200</span>;</div><div class="line">    <span class="keyword">with</span>(<span class="keyword">this</span>)&#123;</div><div class="line">      <span class="built_in">eval</span>(<span class="string">"a=b=null"</span>);</div><div class="line">      setTimeout(<span class="string">"a=b=undefined"</span>);</div><div class="line">      <span class="keyword">new</span> (<span class="built_in">Function</span>(<span class="string">"a=b=NaN"</span>));</div><div class="line">      a=b=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
       
+
+      
+        
     </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
   </div>
+  
 </article>
 
 
-
-
-  <article class="post">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-09-03T13:27:29.196Z"><a href="/corps/2016/09/03/hello-world/">2016-09-03</a></time>
-      
-      
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <h1 class="title"><a href="/corps/2016/09/03/hello-world/">Hello World</a></h1>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/corps/2016/09/03/hello-world/">Hello World</a>
+    </h1>
   
 
-    </header>
-    <div class="entry">
+      </header>
+    
+    <div class="article-meta">
+      <a href="/corps/2016/09/03/hello-world/" class="article-date">
+  <time datetime="2016-09-03T13:27:29.196Z" itemprop="datePublished">2016-09-03</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -157,49 +149,67 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
+
+      
+        
     </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
   </div>
+  
 </article>
 
 
-
-
-
-<nav id="pagination">
   
   
-  <div class="clearfix"></div>
-</nav></div></div>
-    <div class="clearfix"></div>
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/copay" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2016 Corps 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/Alex-fun/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/corps/" class="mobile-nav-link">Home</a>
+  
+    <a href="/corps/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/corps/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/copay" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/corps/fancybox/jquery.fancybox.css">
+  <script src="/corps/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/corps/js/script.js"></script>
+
   </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2016 Corps
-  
-  <p>Theme by <a href="https://caisiduo.xyz" target="_blank">LightOne</a></p>
-</div>
-<div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="/corps/js/jquery.imagesloaded.min.js"></script>
-<script src="/corps/js/gallery.js"></script>
-
-
-
-
-<link rel="stylesheet" href="/corps/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/corps/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
 </body>
 </html>
