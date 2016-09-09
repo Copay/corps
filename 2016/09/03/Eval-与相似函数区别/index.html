@@ -39,7 +39,7 @@ setTimeout():
 setInterval():
 
 每参数二(number)毫秒数,执行参数一.当参数一为字符串时,执行内">
-<meta property="og:updated_time" content="2016-09-03T14:21:12.434Z">
+<meta property="og:updated_time" content="2016-09-09T09:32:43.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Eval() 与相似函数区别">
 <meta name="twitter:description" content="首先,eval()的作用是:
@@ -143,7 +143,7 @@ setInterval():
 </blockquote>
 <p>然后.这些玩意儿大家少玩,对脑子有影响.</p>
 <p>最后是,一个小玩意儿.大家猜猜各行的结果吧.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="class"><span class="keyword">class</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>()&#123;</div><div class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</div><div class="line">    <span class="keyword">this</span>.b = <span class="number">200</span>;</div><div class="line">    <span class="keyword">with</span>(<span class="keyword">this</span>)&#123;</div><div class="line">      <span class="built_in">eval</span>(<span class="string">"a=b=null"</span>);</div><div class="line">      setTimeout(<span class="string">"a=b=undefined"</span>);</div><div class="line">      <span class="keyword">new</span> (<span class="built_in">Function</span>(<span class="string">"a=b=NaN"</span>));</div><div class="line">      a=b=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="class"><span class="keyword">class</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>()&#123;</div><div class="line">    <span class="keyword">this</span>.a = <span class="number">100</span>;</div><div class="line">    <span class="keyword">this</span>.b = <span class="number">200</span>;</div><div class="line">    <span class="keyword">with</span>(<span class="keyword">this</span>)&#123;</div><div class="line">      <span class="built_in">eval</span>(<span class="string">"a=b=null"</span>);</div><div class="line">      setTimeout(<span class="string">"a=b=undefined"</span>,<span class="number">0</span>);</div><div class="line">      <span class="keyword">new</span> (<span class="built_in">Function</span>(<span class="string">"a=b=NaN"</span>));</div><div class="line">      a=b=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
       
 
