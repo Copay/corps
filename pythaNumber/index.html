@@ -61,6 +61,7 @@
 		});
 		window.pytha = function(number){
 			if(!number) return ["",""];
+			if(number<=1) return ["Number so tiny,","Please Use a number bigger than 1."];
 			if(!Number.isInteger(parseFloat(number))) return ["Unexcepted Non-Integer Param.","Unexcepted Non-Integer Param."];
 			if(Math.isOdd(number)) return [Math.floor(Math.pow(number,2) *.5),Math.ceil(Math.pow(number,2) *.5)];
 			return [Math.pow(number/2,2)-1,Math.pow(number/2,2)+1];
