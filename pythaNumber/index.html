@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>勾股数获取</title>
+	<style>
+		html,body{
+			display:flex;
+			min-height:100%;
+			margin:0 auto;
+		}
+		main{
+			display:flex;
+			flex-direction: column;
+			margin:0 auto;
+		}
+		.cor-header {
+		    font-size: 5vw;
+		    display: flex;
+		    flex: 0.4;
+		    flex-direction: column;
+		    justify-content: center;
+		}
+		form{
+			display:flex;
+			flex-direction: column;
+			flex:.3;
+		}
+		input {
+		    flex: 1;
+		    min-height: 3em;
+		    margin: 0.5em;
+		    padding: 0 1em;
+		    border: none;
+		    box-shadow: 0 0.5em 1em -0.7em #000;
+		    transition: box-shadow 1s;
+		}
+		input:focus{
+			box-shadow: 0 0.5em 1em -0.7em rgba(54, 134, 196, 1);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1 class="cor-header">Pythagorean Number Getter</h1>
+		<form action="">
+			<input type="number" name="input">
+			<input type="text" name="output1" disabled>
+			<input type="text" name="output2" disabled>
+		</form>
+	</main>
+	<script>
+	var cDList = [];
+		["input","output1","output2"].forEach(function(n){
+			cDList.push(document.getElementsByName(n)[0]);
+		});
+		cDList[0].addEventListener("input",function(a,b = window.pytha(cDList[0].value)){
+			cDList[1].value = b[0];
+			cDList[2].value = b[1];
+		});
+		window.pytha = function(number){
+			if(!number) return ["",""];
+			if(!Number.isInteger(parseFloat(number))) return ["Unexcepted Non-Integer Param.","Unexcepted Non-Integer Param."];
+			if(Math.isOdd(number)) return [Math.floor(Math.pow(number,2) *.5),Math.ceil(Math.pow(number,2) *.5)];
+			return [Math.pow(number/2,2)-1,Math.pow(number/2,2)+1];
+		}
+		Math.isOdd = function(number){
+			return number<<31>>31===-1 ? true : false;
+		}
+	</script>
+</body>
+</html>
